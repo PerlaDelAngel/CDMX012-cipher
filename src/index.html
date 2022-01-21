@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Codifica mensajes en claves secretas</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!--NAV TAG STARTS-->
+    <header>
+      <a class="nav-logo" href="#">
+        <img src="Pictures/LOGO cipher.png" alt="Logotipo de Educando Juntos" height="80px">
+      </a>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Sugerencias de uso</a></li>
+          <li><a href="#">¿Cómo funciona el Cifrado César?</a></li>
+          <li><a href="#">Cifra o descifra tu mensaje</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--NAV TAG ENDS-->
+
     <div id="root">
-      <h1>Hello world!</h1>
+      <h1>Codifica mensajes en claves secretas</h1>
     </div>
+
+    <div id="parrafoInicio">
+      <p>Crea pistas para juegos de búsqueda del tesoro, codifica mensajes secretos, y mucho más!</p>
+    </div>
+    
+    <div class="cajacentro">
+      <!--MESSAGE INPUT STARTS-->
+      <div id="mensajeInicial">
+        <form id="formInput">
+          <fieldset>
+            <legend>Introduce tu mensaje:</legend>
+            <textarea name="inputMensaje" id="mensaje" cols="75" rows="10" placeholder="Utiliza sólo mayúsculas, no acepta la letra ñ" required></textarea><br>
+
+            <label for="offset">Número de posiciones a desplazar</label>
+            <input type="number" id="offset" name="Offset" min="1" max="100" placeholder="1 a 100">
+            <br><br>
+
+            <p id="pruebaResultado"></p>
+
+            <input type="button" value="Cifrar" id="botonCifrar">
+            <input type="button" value="Descifrar" id="botonDescifrar">
+          </fieldset>
+        </form>
+      </div>
+      <!--MESSAGE INPUT ENDS-->
+
+      <!-- ARROW INBETWEEN BOXES
+      <div id="arrow">
+        <img src="Pictures/arrow.png" alt="flecha">
+      </div> -->
+
+      <!--MESSAGE OUTPUT STARTS-->
+      <div id ="mensajeResultado">
+        <form id = "formOutput">
+          <fieldset>
+            <legend>Mensaje modificado:</legend>
+            <textarea name="mensajeOutput" id="output" cols="75" rows="10" disabled></textarea><br>
+
+            <input type="button" value="Copiar" id="botonCopiar">
+            <input type="button" value="Reiniciar" id="reiniciar">
+          </fieldset>
+        </form>
+      </div>
+      <!-- MESSAGE OUTPUT ENDS-->
+    </div><br>
+    
+    <footer>
+      <p>Site by Perla Del Ángel<br>
+      <a href="mailto:perdelangel@gmail.com">perdelangel@gmail.com</a></p>
+    </footer>
+
+
     <script src="index.js" type="module"></script>
   </body>
+
 </html>

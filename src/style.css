@@ -1,0 +1,101 @@
+body {
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.nav-logo {
+  float: left;  
+  padding: 0px 40px;
+}
+
+.menu {
+    margin-bottom: 3em;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 14px 17px;
+    margin: 10px;
+}
+
+.menu li a:hover{
+    background-color: #FBB020;
+    color: #0A0908;
+    font-weight: bold;
+}
+
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-align: center;
+}
+
+/*#root {
+    display: block;
+    background-image: url(/src/Pictures/header.png);
+    width: 100%;
+}*/
+
+#parrafoInicio {
+    display: block;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#mensajeInicial{
+    display: block;
+    text-align: center;
+    float: left;
+    margin: auto;
+    width: 50%;
+}
+
+#arrow{
+    display: block;
+    text-align: center;
+    float: left;
+    margin: auto;
+    width: 10%;
+    padding-top: 80px;
+}
+
+#mensaje {
+    margin: 0px 0px 10px;
+}
+
+#mensajeResultado{
+    display: block;
+    text-align: center;
+    float: left;
+    margin: auto;
+    width: 50%;
+}
+
+#output {
+    margin: 0px 16px 64px;
+}
+
+footer {
+    float: left;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #D6D6D6;
+    width: 99%;
+    bottom: 0px;
+    position: absolute;
+}
