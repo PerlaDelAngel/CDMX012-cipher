@@ -3,10 +3,47 @@ import cipher from './cipher.js';
 console.log(cipher);
 
 // CIFRAR
-let botonCifrar = document.getElementById("botonCifrar");
-botonCifrar.addEventListener("click", cipher.encode); //acá seria cipher.encode
+function cifrar(){
+  let string = document.getElementById("mensaje").value.toUpperCase();
+  let offset = document.getElementById("offset").value;
+  
+  document.getElementById("output").value = cipher.encode(string, offset);
+}
 
-// MANIPULACIÓN DEL DOM
+let botonCifrar = document.getElementById("botonCifrar");
+botonCifrar.addEventListener("click", cifrar); 
+
+//DESCIFRAR
+function descifrar(){
+  let string = document.getElementById("mensaje").value.toUpperCase();
+  let offset = document.getElementById("offset").value;
+
+  document.getElementById("output").value = cipher.decode(string, offset);
+}
+
+let botonDescifrar = document.getElementById("botonDescifrar");
+botonDescifrar.addEventListener("click", descifrar); 
+
+//COPIAR (NO FUNCIONA LOL)
+/*let botonCopiar = document.getElementById("botonCopiar");
+botonCopiar.addEventListener("click", copyToClipboard);
+
+function copyToClipboard(){
+  let mensajeCopiar = document.getElementById("output").value;
+  mensajeCopiar.select();
+  navigator.clipboard.writeText(mensajeCopiar.value);
+}*/
+
+//LIMPIAR
+let botonReiniciar = document.getElementById("reiniciar");
+botonReiniciar.addEventListener("click", reset);
+
+function reset(){
+  document.getElementById("formInput").reset();
+  document.getElementById("formOutput").reset();
+}
+
+
 
 
 // FUNCIÓN PARA CIFRAR FRASES, en mayúsculas, respeta espacios, números y carácteres especiales
@@ -43,13 +80,10 @@ return nuevaString; //NUEVO
 }*/
 
 // VARIABLES NECESARIAS PARA DESCIFRAR
-let botonDescifrar = document.getElementById("botonDescifrar");
-botonDescifrar.addEventListener("click", decode); // acá sería cipher.decode
+
 
 // FUNCIÓN PARA DESCIFRAR FRASES, en mayúsculas, respeta espacios, números y carácteres especiales
-function decode (){
-  let string = document.getElementById("mensaje").value.toUpperCase();
-  let offset = document.getElementById("offset").value;
+/*function decode (){
   let i = 0;
   let nuevaString = "";
 
@@ -76,23 +110,6 @@ function decode (){
   }
   }
 return nuevaString; //NUEVO
-}      
+}*/      
 
-//FUNCIÓN PARA COPIAR (NO FUNCIONA LOL)
-/*let botonCopiar = document.getElementById("botonCopiar");
-botonCopiar.addEventListener("click", copyToClipboard);
 
-function copyToClipboard(){
-  let mensajeCopiar = document.getElementById("output").value;
-  mensajeCopiar.select();
-  navigator.clipboard.writeText(mensajeCopiar.value);
-}*/
-
-//FUNCIÓN PARA LIMPIAR
-let botonReiniciar = document.getElementById("reiniciar");
-botonReiniciar.addEventListener("click", reset);
-
-function reset(){
-  document.getElementById("formInput").reset();
-  document.getElementById("formOutput").reset();
-}
