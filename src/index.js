@@ -4,10 +4,10 @@ console.log(cipher);
 
 // CIFRAR
 function cifrar(){
-  let string = document.getElementById("mensaje").value.toUpperCase();
   let offset = document.getElementById("offset").value;
+  let string = document.getElementById("mensaje").value.toUpperCase();
   
-  document.getElementById("output").value = cipher.encode(string, offset);
+  document.getElementById("output").value = cipher.encode(offset, string);
 }
 
 let botonCifrar = document.getElementById("botonCifrar");
@@ -15,10 +15,10 @@ botonCifrar.addEventListener("click", cifrar);
 
 //DESCIFRAR
 function descifrar(){
-  let string = document.getElementById("mensaje").value.toUpperCase();
   let offset = document.getElementById("offset").value;
+  let string = document.getElementById("mensaje").value.toUpperCase();
 
-  document.getElementById("output").value = cipher.decode(string, offset);
+  document.getElementById("output").value = cipher.decode(offset, string);
 }
 
 let botonDescifrar = document.getElementById("botonDescifrar");
@@ -35,13 +35,13 @@ function copyToClipboard(){
 }*/
 
 //LIMPIAR
-let botonReiniciar = document.getElementById("reiniciar");
-botonReiniciar.addEventListener("click", reset);
-
 function reset(){
   document.getElementById("formInput").reset();
   document.getElementById("formOutput").reset();
 }
+
+let botonReiniciar = document.getElementById("reiniciar");
+botonReiniciar.addEventListener("click", reset);
 
 
 

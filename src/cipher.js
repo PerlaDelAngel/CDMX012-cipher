@@ -1,5 +1,5 @@
 const cipher = {
-    encode : function(string, offset){
+    encode : function(offset, string){
         let i = 0;
         let nuevaString = "";
 
@@ -27,7 +27,7 @@ const cipher = {
         }
     },
 
-    decode : function(string, offset){
+    decode : function(offset, string){
         let i = 0;
         let nuevaString = "";
           
