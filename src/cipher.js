@@ -34,7 +34,8 @@ const cipher = {
         while (i <= string.length){
             let letraCifrar = string.slice(i, i + 1);
             let caracterAscii = letraCifrar.charCodeAt();
-            let formulaCifrar = (caracterAscii - 65) - offset % 26 + 65;
+            //let formulaCifrar = (caracterAscii - 65) - offset % 26 + 65;
+            let formulaCifrar = caracterAscii - (offset % 26);
           
             if (formulaCifrar < 65 && caracterAscii != 32){  //EN CASO DE QUE SE SALGA DEL RANGO DE LETRAS MAYÚSCULAS Y SEA DIFERENTE A UN ESPACIO
                 let nuevaLetra = String.fromCharCode(formulaCifrar + 26);

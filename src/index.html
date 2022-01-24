@@ -9,9 +9,9 @@
 
   <body>
     <!--NAV TAG STARTS-->
-    <header>
+    <header class="header">
       <a class="nav-logo" href="#">
-        <img src="Pictures/LOGO cipher.png" alt="Logotipo de Educando Juntos" height="80px">
+        <img src="Pictures/LOGO cipher.png" alt="Logotipo de Educando Juntos" height="70px">
       </a>
 
       <nav class="menu">
@@ -19,60 +19,46 @@
           <li><a href="#">Contacto</a></li>
           <li><a href="#">Sugerencias de uso</a></li>
           <li><a href="#">¿Cómo funciona el Cifrado César?</a></li>
-          <li><a href="#">Cifra o descifra tu mensaje</a></li>
         </ul>
       </nav>
     </header>
     <!--NAV TAG ENDS-->
-
-    <div id="root">
-      <h1>Codifica mensajes en claves secretas</h1>
-    </div>
-
-    <div id="parrafoInicio">
-      <p>Crea pistas para juegos de búsqueda del tesoro, codifica mensajes secretos, y mucho más!</p>
-    </div>
-    
-    <div class="cajacentro">
-      <!--MESSAGE INPUT STARTS-->
-      <div id="mensajeInicial">
-        <form id="formInput">
-          <fieldset>
-            <legend>Introduce tu mensaje:</legend>
-            <textarea name="inputMensaje" id="mensaje" cols="75" rows="10" placeholder="Utiliza sólo mayúsculas, no acepta la letra ñ" required></textarea><br>
-
-            <label for="offset">Número de posiciones a desplazar</label>
-            <input type="number" id="offset" name="Offset" min="1" max="100" placeholder="1 a 100">
-            <br><br>
-
-            <p id="pruebaResultado"></p>
-
-            <input type="button" value="Cifrar" id="botonCifrar">
-            <input type="button" value="Descifrar" id="botonDescifrar">
-          </fieldset>
-        </form>
+    <div class="contents">
+      <div class="root">
+        <h1>Codifica mensajes en claves secretas</h1>
+        <p>¡Crea pistas para juegos de búsqueda del tesoro, codifica mensajes secretos, y mucho más!</p>
       </div>
-      <!--MESSAGE INPUT ENDS-->
+      
+      <div class="cajaCentro">
+        <!--MESSAGE INPUT STARTS-->
+        <div class="mensajes">
+          <form id="formInput">
+              <legend for="inputMensaje"><strong>Introduce tu mensaje</strong></legend><hr>
+              <textarea name="inputMensaje" id="mensaje" cols="50" rows="10" placeholder="UTILIZA SÓLO MAYÚSCULAS" required></textarea>
 
-      <!-- ARROW INBETWEEN BOXES
-      <div id="arrow">
-        <img src="Pictures/arrow.png" alt="flecha">
-      </div> -->
+              <label for="offset">Número de posiciones a desplazar</label>
+              <input type="number" id="offset" name="Offset" min="1" max="100" value="1">
+              <br><br>
 
-      <!--MESSAGE OUTPUT STARTS-->
-      <div id ="mensajeResultado">
-        <form id = "formOutput">
-          <fieldset>
-            <legend>Mensaje modificado:</legend>
-            <textarea name="mensajeOutput" id="output" cols="75" rows="10" disabled></textarea><br>
+              <input type="button" value="Cifrar" id="botonCifrar" class="botones">
+              <input type="button" value="Descifrar" id="botonDescifrar" class="botones">
+          </form>
+        </div>
+        <!--MESSAGE INPUT ENDS-->
 
-            <input type="button" value="Copiar" id="botonCopiar">
-            <input type="button" value="Reiniciar" id="reiniciar">
-          </fieldset>
-        </form>
-      </div>
-      <!-- MESSAGE OUTPUT ENDS-->
-    </div><br>
+        <!--MESSAGE OUTPUT STARTS-->
+        <div class="mensajes">
+          <form id = "formOutput">
+              <legend for="mensajeOutput"><strong>Mensaje modificado</strong></legend><hr>
+              <textarea name="mensajeOutput" id="output" cols="50" rows="10" disabled></textarea>
+
+              <input type="button" value="Copiar" id="botonCopiar" class="botones">
+              <input type="button" value="Reiniciar" id="reiniciar" class="botones">
+          </form>
+        </div>
+        <!-- MESSAGE OUTPUT ENDS-->
+      </div><br>
+  </div>
     
     <footer>
       <p>Site by Perla Del Ángel<br>
