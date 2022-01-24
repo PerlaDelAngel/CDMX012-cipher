@@ -4,8 +4,8 @@ console.log(cipher);
 
 // CIFRAR
 function cifrar(){
-  let offset = document.getElementById("offset").value;
-  let string = document.getElementById("mensaje").value.toUpperCase();
+  let offset = Number(document.getElementById("offset").value);
+  let string = document.getElementById("mensaje").value;
   
   document.getElementById("output").value = cipher.encode(offset, string);
 }
@@ -15,8 +15,8 @@ botonCifrar.addEventListener("click", cifrar);
 
 //DESCIFRAR
 function descifrar(){
-  let offset = document.getElementById("offset").value;
-  let string = document.getElementById("mensaje").value.toUpperCase();
+  let offset = Number(document.getElementById("offset").value);
+  let string = document.getElementById("mensaje").value;
 
   document.getElementById("output").value = cipher.decode(offset, string);
 }

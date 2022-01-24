@@ -1,13 +1,3 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*background-color: #654ea3;*/
-    /*background: linear-gradient(to right, #141e30, #243b55);*/
-    background: linear-gradient(to right, #0d133e, #042a56, #00426c, #005a7f, #137390);
-    color: #FFFFFF;
-    /*background: #B5BFC6;
-    color: black;*/
-}
-
 .nav-logo {
   float: left;  
   padding: 0px 40px;
@@ -33,11 +23,12 @@ body {
 }
 
 .menu li a:hover{
-    background-color: #FBB020;
+    background-color: /*#1790B5;*/ #137390;
     border-radius: 30px;
-    color: black;
+    color: white;
     font-weight: bold;
     border: 2px solid rgba(255, 255, 255, 0.29);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -45,6 +36,15 @@ body {
     border-radius: 15px;
     height: max-content;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*background-color: #654ea3;*/
+    background: linear-gradient(to right, #042a56, #00426c, #005a7f, #137390);
+    color: #FFFFFF;
+    /*background: #B5BFC6;
+    color: black;*/
 }
 
 .root {
@@ -106,7 +106,7 @@ body {
 }
 
 .botones:hover{
-    background-color:#0D133E;
+    background-color: #1790B5; /*#0D133E;*/
     color: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
