@@ -16,9 +16,8 @@
 
       <nav class="menu">
         <ul>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Sugerencias de uso</a></li>
-          <li><a href="#">¿Cómo funciona el Cifrado César?</a></li>
+          <button id="uso">Sugerencias de uso</button>
+          <button id="cifradoCesar">¿Cómo funciona el Cifrado César?</button>
         </ul>
       </nav>
     </header>
@@ -33,7 +32,7 @@
         <!--MESSAGE INPUT STARTS-->
         <div class="mensajes">
           <form id="formInput">
-              <legend for="inputMensaje"><strong>Introduce tu mensaje</strong></legend><hr>
+              <legend for="inputMensaje"><strong>Escribe tu mensaje</strong></legend><hr>
               <textarea name="inputMensaje" id="mensaje" cols="50" rows="10" required></textarea>
 
               <label for="offset">Número de posiciones a desplazar</label>
@@ -58,8 +57,28 @@
         </div>
         <!-- MESSAGE OUTPUT ENDS-->
       </div><br>
-  </div>
+    </div>
     
+    <div id="seccionCifradoCesar" class="popup-wrapper">
+      <div class="popup">
+        <div id="close1" class="popup-close" >x</div>
+        <div class="popup-content">
+          <h2>¿Cómo funciona el Cifrado César?</h2>
+          <p>CONTENIDO</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="seccionSugerencias" class="popup-wrapper">
+      <div class="popup">
+        <div id="close2" class="popup-close" >x</div>
+        <div class="popup-content">
+          <h2>Sugerencias de uso</h2>
+        </div>
+      </div>
+    </div>
+
+
     <footer>
       <p>Site by Perla Del Ángel<br>
       <a href="mailto:perdelangel@gmail.com">perdelangel@gmail.com</a></p>
