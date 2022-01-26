@@ -8,82 +8,94 @@
   </head>
 
   <body>
-    <!--NAV TAG STARTS-->
+    <!--HEADER TAG STARTS-->
     <header class="header">
-      <a class="nav-logo" href="#">
-        <img src="Pictures/LOGO cipher.png" alt="Logotipo de Educando Juntos" height="70px">
-      </a>
+      <img src="Pictures/LOGO cipher.png" alt="Logotipo de Educando Juntos" height="70px" class="nav-logo">
 
       <nav class="menu">
-        <ul>
-          <button id="uso">Sugerencias de uso</button>
-          <button id="cifradoCesar">¿Cómo funciona el Cifrado César?</button>
-        </ul>
+          <button id="useSuggestions">Sugerencias de uso</button>
+          <button id="caesarCipherButton">¿Cómo funciona?</button>
       </nav>
     </header>
-    <!--NAV TAG ENDS-->
-    <div class="contents">
+    <!--HEADER TAG ENDS-->
+
+    <main class="contents">
       <div class="root">
         <h1>Codifica mensajes en claves secretas</h1>
         <p>¡Crea pistas para juegos de búsqueda del tesoro, codifica mensajes secretos, y mucho más!</p>
       </div>
       
-      <div class="cajaCentro">
+      <div class="center-box">
         <!--MESSAGE INPUT STARTS-->
-        <div class="mensajes">
-          <form id="formInput">
-              <legend for="inputMensaje"><strong>Escribe tu mensaje</strong></legend><hr>
-              <textarea name="inputMensaje" id="mensaje" cols="50" rows="10" required></textarea>
+        <form id="formInput" class="messages">
+          <label for="inputMessage"><h2>Escribe tu mensaje</h2></label><hr>
+          <textarea name="inputMessage" id="message" cols="50" rows="9" required></textarea>
 
-              <label for="offset">Número de posiciones a desplazar</label>
-              <input type="number" id="offset" name="Offset" min="1" max="100" value="1">
-              <br><br>
+          <label for="offset">Número de posiciones a desplazar:</label>
+          <input type="number" id="offset" name="Offset" min="1" max="100" value="1">
+          <br><br>
 
-              <input type="button" value="Cifrar" id="botonCifrar" class="botones">
-              <input type="button" value="Descifrar" id="botonDescifrar" class="botones">
-          </form>
-        </div>
+          <input type="button" value="Cifrar" id="cipherButton" class="buttons">
+          <input type="button" value="Descifrar" id="decipherButton" class="buttons">
+        </form>
         <!--MESSAGE INPUT ENDS-->
 
         <!--MESSAGE OUTPUT STARTS-->
-        <div class="mensajes">
-          <form id = "formOutput">
-              <legend for="mensajeOutput"><strong>Mensaje modificado</strong></legend><hr>
-              <textarea name="mensajeOutput" id="output" cols="50" rows="10" disabled></textarea>
+        <form id = "formOutput" class="messages">
+          <label for="messageOutput"><h2>Mensaje modificado</h2></label><hr>
+          <textarea name="messageOutput" id="output" cols="50" rows="9" disabled></textarea>
 
-              <input type="button" value="Copiar" id="botonCopiar" class="botones">
-              <input type="button" value="Reiniciar" id="reiniciar" class="botones">
-          </form>
-        </div>
+          <input type="button" value="Copiar" id="copyButton" class="buttons">
+          <input type="button" value="Reiniciar" id="resetButton" class="buttons">
+        </form>
         <!-- MESSAGE OUTPUT ENDS-->
-      </div><br>
-    </div>
+      </div>
+    </main>
     
-    <div id="seccionCifradoCesar" class="popup-wrapper">
+    <!-- POP UP 1-->
+    <div id="caesarCipherSection" class="popup-wrapper">
       <div class="popup">
         <div id="close1" class="popup-close" >x</div>
         <div class="popup-content">
-          <h2>¿Cómo funciona el Cifrado César?</h2>
-          <p>CONTENIDO</p>
+          <h2>¿Cómo funciona?</h2>
+          <p>Para encriptar los mensajes utilizaremos el método conocido como <strong>cifrado César</strong>, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.</p>
+          <p>Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.</p><br>
+          <img src="Pictures/ejemplo-cifrado.png" alt="Ejemplo de Cifrado César" height="200px"><br>
+          <p>Este sitio te permite ingresar tu mensaje y seleccionar el número de posiciones a desplazar para cifrar o descifrar cualquier texto.</p>
         </div>
       </div>
     </div>
-
-    <div id="seccionSugerencias" class="popup-wrapper">
+    
+    <!-- POP UP 2-->
+    <div id="suggestionsSection" class="popup-wrapper">
       <div class="popup">
-        <div id="close2" class="popup-close" >x</div>
+        <div id="close2" class="popup-close">x</div>
         <div class="popup-content">
           <h2>Sugerencias de uso</h2>
+          
+          <div class="use">
+          <img src="Pictures/usos1.png" atl="Niños saltando y dibujando" height="170px" class="img">
+          <p class="txt-use">Arma pistas para tus alumnos para realizar una búsqueda del tesoro.</p>
+          </div>
+
+          <div class="use">
+          <p class="txt-use">Codifica mensajes para tus hijos y ayudales a estimular el pensamiento lógico-matemático para descubrir su significado.</p>
+          <img src="Pictures/usos2.png" alt="Papá jugando con sus hijos" height="150px" class="img">
+          </div>
+
+          <div class="use">
+          <img src="Pictures/usos3.png" alt="Laptop" height="150px" class="img">
+          <p class="txt-use">Crea contraseñas seguras pero fáciles de recordar.</p>
+          </div>
         </div>
       </div>
     </div>
 
-
+    <!-- FOOTER -->
     <footer>
-      <p>Site by Perla Del Ángel<br>
+      <p>Site by Perla Del Ángel - 2022<br>
       <a href="mailto:perdelangel@gmail.com">perdelangel@gmail.com</a></p>
     </footer>
-
 
     <script src="index.js" type="module"></script>
   </body>
