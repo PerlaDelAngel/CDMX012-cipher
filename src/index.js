@@ -48,7 +48,7 @@ resetButton.addEventListener("click", reset);
 //POP UP 1
 let botonPop1 = document.getElementById("caesarCipherButton");
 let popWrapper1 = document.getElementById("caesarCipherSection");
-const cerrar1 = document.getElementById("close1");
+let cerrar1 = document.getElementById("close1");
 
 //MOSTRAR POP UP 1
 botonPop1.addEventListener("click", function(){
@@ -63,7 +63,7 @@ cerrar1.addEventListener("click", function(){
 //POP UP 2
 let botonPop2 = document.getElementById("useSuggestions");
 let popWrapper2 = document.getElementById("suggestionsSection");
-const cerrar2 = document.getElementById("close2");
+let cerrar2 = document.getElementById("close2");
 
 //MOSTRAR POP UP 2
 botonPop2.addEventListener("click", function(){

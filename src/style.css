@@ -1,16 +1,22 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #042a56;
+    background: linear-gradient(to right, #042a56, #00426c, #005a7f, #137390);
+    color: #FFFFFF;
+}
+
 .nav-logo {
   float: left;  
-  padding: 0px 30px;
-  margin: 5px 0px;
+  padding: 5px 30px;
 }
 
 .header {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; 
     background-color: white;
     border-radius: 15px;
-    height: max-content;
+    height: auto;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -28,21 +34,8 @@
 }
 
 .menu button:hover{
-    background-color: white; 
-    border-radius: 30px;
     color: black;
-    font-weight: bold;
-    border: 2px solid rgba(255, 255, 255, 0.29);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #042a56;
-    background: linear-gradient(to right, #042a56, #00426c, #005a7f, #137390);
-    color: #FFFFFF;
 }
 
 .root {
@@ -66,8 +59,8 @@ body {
     padding: 1em;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -110,7 +103,7 @@ h2 {
 }
 
 .buttons:hover{
-    background-color: #1790B5; /*#0D133E;*/
+    background-color: #1790B5; 
     color: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
@@ -148,7 +141,6 @@ h2 {
 .popup {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    width: 100%;
     max-width: 650px;
     background: white;
     color: black;
@@ -162,7 +154,7 @@ h2 {
     top: 5px;
     right: 15px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 27px;
 }
 
 .use{
@@ -184,10 +176,9 @@ footer {
     font-size: 16px;
     margin-top: 40px;
     bottom: 0px;
-    position: absolute;
-    display: block;
+    position: fixed;
     text-align: center;
-    width: 99%;
+    width: 100%;
 }
 
 footer a {
